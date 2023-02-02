@@ -10,4 +10,5 @@ function stopSliding(slider){
   var sliderAbove = document.getElementById("slider".concat(slider+1));
   var sliderBelow = document.getElementById("slider".concat(slider-1));
   var left = window.getComputedStyle(sliderCurrent).getPropertyValue("left");
+  sliderCurrent.classList.remove("animate");
 }
