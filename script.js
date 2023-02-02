@@ -39,7 +39,7 @@ function stopSliding(slider) {
   sliderAbove.style.width = offset;
   sliderAbove.style.visibility = "visible";
   slideWidth = slideWidth + absDifference;
-  document.documentElement.style.setProperty('--width', slideWidth + )
+  document.documentElement.style.setProperty('--width', slideWidth +"px" );
   var onclick = "stopSliding(" + (slider + 1) + ")";
   document.getElementById("btn").setAttribute("onclick", onclick);
 }
