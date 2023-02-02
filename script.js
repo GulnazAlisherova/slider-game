@@ -4,6 +4,7 @@ for (var i = 25; i > 0; i--) {
   slider.setAttribute("id", "slider" + i);
   document.getElementById("game").append(slider);
 }
+var slideWidth = 400;
 
 function stopSliding(slider) {
   var sliderCurrent = document.getElementById("slider".concat(slider));
@@ -16,11 +17,10 @@ function stopSliding(slider) {
   var left = window.getComputedStyle(sliderCurrent).getPropertyValue("left");
   sliderCurrent.classList.remove("animate");
   sliderCurrent.style.left = "left";
-  var width = window.getComputedStyle(sliderCurrent).getPropertyValue("width");
+  var width =parseInt(window.getComputedStyle(sliderCurrent).getPropertyValue("width"));
   var leftBelow = parseInt(window.getComputedStyle(sliderBelow).getPropertyValue("left"));
   left = parseInt(left);
-  var difference = left - leftBelow;
-  var absDifference = Math.abs(difference);
+  var difference = left - leftBelow; 
   if (difference > width || difference < -width) {
     var score = "Score: ".concat(slider - 1);
     alert(score);
@@ -37,6 +37,8 @@ function stopSliding(slider) {
   sliderCurrent.style.width = offset;
   sliderAbove.style.width = offset;
   sliderAbove.style.visibility = "visible";
+  slideWidth= slideWidth+absDifference;
+  document.documentElement.style.setProperty('--width', slideWidth + )
   var onclick = "stopSliding(" + (slider + 1) + ")";
   document.getElementById("btn").setAttribute("onclick", onclick);
 }
