@@ -27,6 +27,7 @@ function stopSliding(slider) {
   var offset = (width - absDifference).toString().concat("px");
   sliderCurrent.style.width = offset;
   sliderAbove.style.width = offset;
+  sliderAbove.style.visibility = "visible";
 }
 
 
