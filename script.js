@@ -25,6 +25,7 @@ function stopSliding(slider) {
     sliderCurrent.style.left = left.toString().concat("px");
   }
   var offset = (width - absDifference).toString().concat("px");
+  sliderCurrent.style.width = offset;
 }
 
 
