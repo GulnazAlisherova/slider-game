@@ -24,6 +24,7 @@ function stopSliding(slider) {
   if(difference>width||difference<-width){
     var score = "Score: ".concat(slider-1);
     alert(score);
+    Location.reload();
   }
   if(difference<0){
     left = left + absDifference;
