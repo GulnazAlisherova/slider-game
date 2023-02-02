@@ -5,6 +5,6 @@ for (var i = 25; i > 0; i--) {
   document.getElementById("game").append(slider);
 }
 
-function stopSliding(){
-  
+function stopSliding(slider){
+
 }
