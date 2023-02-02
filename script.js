@@ -7,4 +7,5 @@ for (var i = 25; i > 0; i--) {
 
 function stopSliding(slider){
   var sliderCurrent = document.getElementById("slider".concat(slider));
+  var sliderAbove = document.getElementById("slider".concat(slider+1));
 }
