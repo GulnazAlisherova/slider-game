@@ -20,6 +20,9 @@ function stopSliding(slider) {
   if(difference<0){
     left = left + absDifference;
   }
+  else{
+    left = lefy - absDifference
+  }
 }
 
 
