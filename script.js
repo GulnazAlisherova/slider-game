@@ -12,4 +12,5 @@ function stopSliding(slider){
   var left = window.getComputedStyle(sliderCurrent).getPropertyValue("left");
   sliderCurrent.classList.remove("animate");
   sliderCurrent.style.left = "left";
+  var width =  window.getComputedStyle(sliderCurrent).getPropertyValue("width");
 }
