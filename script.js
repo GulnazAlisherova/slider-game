@@ -17,27 +17,28 @@ function stopSliding(slider) {
   var left = window.getComputedStyle(sliderCurrent).getPropertyValue("left");
   sliderCurrent.classList.remove("animate");
   sliderCurrent.style.left = "left";
-  var width =parseInt(window.getComputedStyle(sliderCurrent).getPropertyValue("width"));
+  var width = parseInt(window.getComputedStyle(sliderCurrent).getPropertyValue("width"));
   var leftBelow = parseInt(window.getComputedStyle(sliderBelow).getPropertyValue("left"));
   left = parseInt(left);
-  var difference = left - leftBelow; 
+  var difference = left - leftBelow;
+  var absDifference = Math.abs(difference);
   if (difference > width || difference < -width) {
     var score = "Score: ".concat(slider - 1);
     alert(score);
     Location.reload();
   }
-  if (difference < 0) {
+  if (difference > 0) {
     left = left + absDifference;
   }
   else {
-    left = lefy - absDifference
+    left = left - absDifference
     sliderCurrent.style.left = left.toString().concat("px");
   }
   var offset = (width - absDifference).toString().concat("px");
   sliderCurrent.style.width = offset;
   sliderAbove.style.width = offset;
   sliderAbove.style.visibility = "visible";
-  slideWidth= slideWidth+absDifference;
+  slideWidth = slideWidth + absDifference;
   document.documentElement.style.setProperty('--width', slideWidth + )
   var onclick = "stopSliding(" + (slider + 1) + ")";
   document.getElementById("btn").setAttribute("onclick", onclick);
