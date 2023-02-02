@@ -17,3 +17,6 @@
   display: block;
   background-color: lightgreen;
 }
+#btn:active{
+  background-color: red;
+}
