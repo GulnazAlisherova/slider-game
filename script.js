@@ -8,11 +8,11 @@ for (var i = 25; i > 0; i--) {
 function stopSliding(slider) {
   var sliderCurrent = document.getElementById("slider".concat(slider));
   var sliderAbove = document.getElementById("slider".concat(slider + 1));
-  if(slider == 1){
+  if (slider == 1) {
     var sliderBelow = sliderCurrent;
-  }else{
-  var sliderBelow = document.getElementById("slider".concat(slider - 1));
-}
+  } else {
+    var sliderBelow = document.getElementById("slider".concat(slider - 1));
+  }
   var left = window.getComputedStyle(sliderCurrent).getPropertyValue("left");
   sliderCurrent.classList.remove("animate");
   sliderCurrent.style.left = "left";
@@ -21,15 +21,15 @@ function stopSliding(slider) {
   left = parseInt(left);
   var difference = left - leftBelow;
   var absDifference = Math.abs(difference);
-  if(difference>width||difference<-width){
-    var score = "Score: ".concat(slider-1);
+  if (difference > width || difference < -width) {
+    var score = "Score: ".concat(slider - 1);
     alert(score);
     Location.reload();
   }
-  if(difference<0){
+  if (difference < 0) {
     left = left + absDifference;
   }
-  else{
+  else {
     left = lefy - absDifference
     sliderCurrent.style.left = left.toString().concat("px");
   }
@@ -37,7 +37,7 @@ function stopSliding(slider) {
   sliderCurrent.style.width = offset;
   sliderAbove.style.width = offset;
   sliderAbove.style.visibility = "visible";
-  var onclick = "stopSliding(" + (slider+1) +")";
+  var onclick = "stopSliding(" + (slider + 1) + ")";
   document.getElementById("btn").setAttribute("onclick", onclick);
 }
 
