@@ -31,5 +31,7 @@
   animation: slide 4s infinite linear;
 }
 @keyframes slide {
-  
+  0%{
+    left: 0px;
+  }
 }
