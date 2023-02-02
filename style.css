@@ -12,15 +12,15 @@
   font-size: 2rem;
   border: 3px solid black;
   padding: 0.5rem 2rem;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   margin: 1rem auto;
   display: block;
   background-color: lightgreen;
 }
-#btn:active{
+#btn:active {
   background-color: red;
 }
-.slider{
+.slider {
   height: 20px;
   width: 100px;
   background-color: red;
