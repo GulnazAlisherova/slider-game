@@ -21,7 +21,10 @@ function stopSliding(slider) {
   left = parseInt(left);
   var difference = left - leftBelow;
   var absDifference = Math.abs(difference);
-  
+  if(difference>width||difference<-width){
+    var score = "Score: ".concat(slider-1);
+    alert(score);
+  }
   if(difference<0){
     left = left + absDifference;
   }
