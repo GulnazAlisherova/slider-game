@@ -4,3 +4,7 @@ for (var i = 25; i > 0; i--) {
   slider.setAttribute("id", "slider" +i);
   document.getElementById("game").append(slider);
 }
+
+function stopSliding(){
+  
+}
