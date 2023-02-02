@@ -1,14 +1,15 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-#game{
+#game {
   width: 500px;
   height: 500px;
   margin: auto;
   border: 1px solid black;
 }
-#btn{
+#btn {
   font-size: 2rem;
-  padding: .5rem 2rem;
+  border: 3px solid black;
+  padding: 0.5rem 2rem;
 }
