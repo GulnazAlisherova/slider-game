@@ -9,7 +9,7 @@ function stopSliding(slider) {
   var sliderCurrent = document.getElementById("slider".concat(slider));
   var sliderAbove = document.getElementById("slider".concat(slider + 1));
   if(slider == 1){
-
+    var sliderBelow = sliderCurrent;
   }else{
   var sliderBelow = document.getElementById("slider".concat(slider - 1));
 }
@@ -32,6 +32,7 @@ function stopSliding(slider) {
   sliderCurrent.style.width = offset;
   sliderAbove.style.width = offset;
   sliderAbove.style.visibility = "visible";
+  var onclick = "stopSliding";
 }
 
 
