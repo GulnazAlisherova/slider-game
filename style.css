@@ -42,7 +42,7 @@
     left: 0px;
   }
   50%{
-    left: 400px;
+    left: var(--width);
   }
   100%{
     left: 0px;
