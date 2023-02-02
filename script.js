@@ -21,6 +21,7 @@ function stopSliding(slider) {
   left = parseInt(left);
   var difference = left - leftBelow;
   var absDifference = Math.abs(difference);
+  
   if(difference<0){
     left = left + absDifference;
   }
@@ -32,7 +33,8 @@ function stopSliding(slider) {
   sliderCurrent.style.width = offset;
   sliderAbove.style.width = offset;
   sliderAbove.style.visibility = "visible";
-  var onclick = "stopSliding";
+  var onclick = "stopSliding(" + (slider+1) +")";
+  document.getElementById("btn").setAttribute("onclick", onclick);
 }
 
 
