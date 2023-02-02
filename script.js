@@ -9,4 +9,5 @@ function stopSliding(slider){
   var sliderCurrent = document.getElementById("slider".concat(slider));
   var sliderAbove = document.getElementById("slider".concat(slider+1));
   var sliderBelow = document.getElementById("slider".concat(slider-1));
+  var left = window.getComputedStyle
 }
