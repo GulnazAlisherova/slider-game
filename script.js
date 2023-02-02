@@ -14,4 +14,6 @@ function stopSliding(slider){
   sliderCurrent.style.left = "left";
   var width =  window.getComputedStyle(sliderCurrent).getPropertyValue("width");
   var leftBelow = parseInt(window.getComputedStyle(sliderBelow).getPropertyValue("left"));
+
+  var difference = left - leftBelow; 
 }
