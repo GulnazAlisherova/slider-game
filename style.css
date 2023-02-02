@@ -27,6 +27,9 @@
   position: relative;
   /* border: 1px solid black; */
 }
-.animate{
-  animation: slide 4s  infinite linear;
+.animate {
+  animation: slide 4s infinite linear;
+}
+@keyframes slide {
+  
 }
