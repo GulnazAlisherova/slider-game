@@ -22,6 +22,7 @@ function stopSliding(slider) {
   }
   else{
     left = lefy - absDifference
+    sliderCurrent.style.left = left.toString().concat("px");
   }
 }
 
