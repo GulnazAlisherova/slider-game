@@ -28,6 +28,9 @@
   position: relative;
   /* border: 1px solid black; */
 }
+#slider1{
+  visibility: visible;
+}
 .animate {
   animation: slide 4s infinite linear;
 }
